@@ -14,10 +14,19 @@ import java.util.List;
 public class ProductController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher rd= req.getRequestDispatcher("WEB-INF/views/product.jsp");
+        String categoryId = req.getParameter("category");
+        String productId=req.getParameter("id");
+        RequestDispatcher rd;
         ProductDbService pds=new ProductDbService();
-        List<Product> products = pds.getProducts();
-        req.setAttribute("productList", products);
+        if (productId!=null&&!productId.isEmpty()){
+            rd=req.getRequestDispatcher("WEB-INF/views/product.jsp");
+            Product product= pds.getProductById(productId);
+            req.setAttribute("product", product);
+        }else {
+            rd=req.getRequestDispatcher("WEB-INF/views/products.jsp");
+            List<Product> products = pds.getProductsByCategoryId(categoryId);
+            req.setAttribute("productList", products);
+        }
         rd.forward(req, resp);
     }
 }

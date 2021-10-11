@@ -10,20 +10,22 @@
 	Вы не авторизованы
 </c:otherwise>
 </c:choose><br />
-                    В вашей корзине 0 товаров.
+                    В вашей <a href="cart"><font color=white> корзине </font></a> ${(sessionScope.productsCartMapSize==null?0:productsCartMapSize)} товаров.
                     </font>
                     </td>
                     </tr>
                     </table>
                     <h2>Боковое меню</h2>
 					<ul>
-						<li><a href="products">Категория 1</a></li>
-						<li><a href="products">Категория 2</a></li>
-						<li><a href="products">Категория 3</a></li>
-						<li><a href="registration">Регистрация</a></li>
-						<li><a href="login">Вход</a></li>
-						<li><a href="cart.php">Корзина</a></li>
+					<font color=white>
+						<li><a href="products?category=1"><font color=white>Myaso</font></a></li>
+						<li><a href="products?category=2"><font color=white>Kolbasa</font></a></li>
+						<li><a href="products?category=3"><font color=white>Salo</font></a></li>
+						<li><a href="registration"><font color=white>Регистрация</font></a></li>
+						<li><a href="login"><font color=white>Вход</font></a></li>
+						<li><a href="cart"><font color=white>Корзина</font></a></li>
 					</ul>
+					</font>
 				</div>
 			</div>
 		</div>

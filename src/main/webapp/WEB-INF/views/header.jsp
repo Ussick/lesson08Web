@@ -21,11 +21,11 @@
 	</div>
 	<div id="menu">
 		<ul>
-			<li class="current_page_item"><a href="index.php">Главная</a></li>
+			<li class="current_page_item"><a href="enter">Главная</a></li>
 			<li><a href="products">Товары</a></li>
 			<li><a href="registration">Регистрация</a></li>
 			<li><a href="login">Вход</a></li>
-			<li><a href="cart.php">Корзина</a></li>
+			<li><a href="cart">Корзина</a></li>
 		</ul>
 	</div>
 </div>
